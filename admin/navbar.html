@@ -1,0 +1,43 @@
+<script>
+ $(document).ready(function() {
+    $('select').material_select();
+    $('.collapsible').collapsible();
+  });
+    
+    
+     $(function(){
+        $('.my-btn').sideNav({
+          edge: 'left', // Choose the horizontal origin
+          closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+          draggable: true // Choose whether you can drag to open on touch screens
+        }
+        );
+    });
+      
+</script>
+
+<nav class="black" role="navigation">
+    <div class="nav-wrapper">
+     <a href="" class="brand-logo center black-text"></a>
+     <ul id="nav-mobile" class="right hide-on-med-and-down">
+       <!-- <li>
+         
+         </li>-->
+         <li><a data-activates="slide-out" class="my-btn btn red white-text" href="#"><i class="material-icons">menu</i></a>
+                <ul id="slide-out" class="side-nav">
+                    <li><a class="waves-effect" href="dashboard.php">Dashboard<i class="material-icons">dashboard</i></a></li>
+                      <ul class="collapsible" data-collapsible="accordion" style="color:black;">  
+                          
+
+                          
+
+                         
+                          <li><a class="waves-effect" href="settings.php">Settings</a></li>
+                          <li><a class="waves-effect" href="logout.php">Logout</a></li>
+                    </ul>
+              </ul>
+         </li>
+      </ul>
+        
+    </div>
+  </nav>
